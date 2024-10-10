@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doctor Appointment System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Login Section -->
+    <div class="container" id="login-section">
+        <h1>Login to Doctor Appointment System</h1>
+        <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <button id="register-button">Register</button>
+    </div>
+
+    <!-- Registration Section -->
+    <div class="container" id="register-section" style="display: none;">
+        <h1>Register for Doctor Appointment System</h1>
+        <form id="register-form">
+            <label for="reg-username">Username:</label>
+            <input type="text" id="reg-username" name="username" required>
+            <label for="reg-password">Password:</label>
+            <input type="password" id="reg-password" name="password" required>
+            <label for="reg-email">Email:</label>
+            <input type="email" id="reg-email" name="email" required>
+            <label for="reg-mobile">Mobile Number:</label>
+            <input type="tel" id="reg-mobile" name="mobile" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" required>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Main Section -->
+    <div class="container" id="main-section" style="display: none;">
+        <header>
+            <h1>Welcome to Doctor Appointment System</h1>
+        </header>
+        <section id="home-section">
+            <img src="images/hospital-image.jpg" alt="Hospital Image" id="hospital-image">
+            <div class="slider">
+                <div class="slider-item" id="appointment-form-link">Appointment Form</div>
+                <div class="slider-item" id="cancel-appointment-link">Cancel Appointment</div>
+                <div class="slider-item" id="logout">Logout</div>
+            </div>
+        </section>
+        <section id="appointment-form-section" style="display: none;">
+            <h2>Appointment Form</h2>
+            <form id="appointment-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+                
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+                
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="area">Area:</label>
+                <select id="area" name="area" required>
+                    <option value="jubilee-hills">Jubilee Hills</option>
+                    <option value="gachibowli">Gachibowli</option>
+                    <option value="hitech-city">HITECH City</option>
+                    <option value="manikonda">Manikonda</option>
+                    <option value="kondapur">Kondapur</option>
+                    <option value="kothaguda">KothaGuda</option>
+                    <option value="abids">Abids</option>
+                    <option value="miyapur">Miyapur</option>
+                    <option value="madinaguda">Madinaguda</option>
+                    <option value="kukatpally">Kukatpally</option>
+                    <option value="medchal">Medchal</option>
+                    <option value="nizampet">Nizampet</option>
+                    <option value="balanagar">Balanagar</option>
+                    <option value="dilshuknagar">Dilshuknagar</option>
+                    <option value="ameerpet">Ameerpet</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="hospital">Hospital:</label>
+                <select id="hospital" name="hospital" required></select>
+
+                <label for="problem">Problem:</label>
+                <select id="problem" name="problem" required>
+                    <option value="general">General</option>
+                    <option value="cardiology">Cardiology</option>
+                    <option value="neurology">Neurology</option>
+                    <option value="orthopedics">Orthopedics</option>
+                    <option value="pediatrics">Pediatrics</option>
+                    <option value="dermatology">Dermatology</option>
+                    <option value="other">Other</option>
+                </select>
+
+                <label for="doctor">Doctor:</label>
+                <select id="doctor" name="doctor" required></select>
+
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label for="time">Time:</label>
+                <input type="time" id="time" name="time" required>
+
+                <button type="submit">Book Appointment</button>
+            </form>
+        </section>
+        <section id="appointment-details-section" style="display: none;">
+            <h2>Appointment Details</h2>
+            <p>Name: <span id="appointment-name"></span></p>
+            <p>Age: <span id="appointment-age"></span></p>
+            <p>Gender: <span id="appointment-gender"></span></p>
+            <p>Phone: <span id="appointment-phone"></span></p>
+            <p>Area: <span id="appointment-area"></span></p>
+            <p>Hospital: <span id="appointment-hospital"></span></p>
+            <p>Problem: <span id="appointment-problem"></span></p>
+            <p>Doctor: <span id="appointment-doctor"></span></p>
+            <p>Date: <span id="appointment-date"></span></p>
+            <p>Time: <span id="appointment-time"></span></p>
+            <button id="cancel-appointment-button">Cancel Appointment</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
